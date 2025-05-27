@@ -43,7 +43,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.4em;
 	text-align: center;
-	margin: 0;
+	margin: 1rem;
 }
 
 a {
@@ -55,16 +55,39 @@ a:visited {
 }
 
 body > hr {
-	margin: 1rem 20%;
+	margin: 2rem 20%;
 	background: linear-gradient(90deg, transparent 0%, gray 50%, transparent 100%);
 	border: none;
 	height: 2px;
 }
 
-/* Title and Release Date */
+section > :first-child {
+	margin-top: 0;
+}
+
+section > :last-child {
+	margin-bottom: 0;
+}
+
+section > p {
+	margin: 0;
+}
+
 #title {
 	font-size: 3.3em;
-	margin: 0.3em;
+	margin-bottom: 2rem;
+}
+
+.largeText {
+	font-size: 3.5rem;
+}
+
+.veryLargeText {
+	font-size: 7rem;
+}
+
+.largeText, .veryLargeText {
+	font-weight: 700;
 }
 
 .yes {
@@ -83,45 +106,23 @@ body > hr {
 	color: var(--color-unknown);
 }
 
-.yes, .no {
-	font-size: 2.4em;
-}
-
-.unknown, .kinda {
-	font-size: 2em;
-}
-
 .yes, .no, .unknown, .kinda {
 	font-family: 'Georgia', 'Open Sans', sans-serif;
 	text-shadow: 0 0 1.5rem color-mix(in srgb, currentcolor 35%, transparent);
 }
 
-/* YouTube Video Player */
-.latestVideoEmbed {
-	position: relative;
-	padding-bottom: 56.25%;
-	height: 0;
+.hidden {
+	display: none;
 }
 
-iframe[title='YouTube video player'] {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	padding-bottom: 0;
+.latestVideoEmbed {
+	width: 720px;
+	max-width: 100%;
+	aspect-ratio: 16 / 9;
 	border: none;
 	border-radius: 0.75rem;
 }
 
-main {
-	height: auto;
-	max-width: 32.142857142857146em;
-	margin: 0 auto;
-	padding: 1rem;
-}
-
-/* Other News */
 .otherNews {
 	margin: 0.1em;
 	font-size: 115%;
@@ -132,7 +133,6 @@ details {
 	font-family: monospace;
 	text-align: left;
 	max-width: 52.5em;
-	width: 85%;
 	margin: 1rem auto;
 	padding: 1rem;
 	background-color: var(--color-details-background);
@@ -152,7 +152,6 @@ summary {
 	cursor: pointer;
 }
 
-/* Page Footer */
 footer {
 	font-size: 0.8em;
 	text-align: center;
