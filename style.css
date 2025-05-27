@@ -111,10 +111,6 @@ section > p {
 	text-shadow: 0 0 1.5rem color-mix(in srgb, currentcolor 35%, transparent);
 }
 
-.hidden {
-	display: none;
-}
-
 .latestVideoEmbed {
 	width: 720px;
 	max-width: 100%;
