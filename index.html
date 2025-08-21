@@ -10,6 +10,7 @@
 	<!--November 10th is a lie.-->
 	<!--The Game Awards is a lie.-->
 	<!--The Cake is a lie is a lie.-->
+  <!-- WE WON! -->
 
 	<head>
 		<title>Is Silksong Out?</title>
@@ -37,6 +38,7 @@
 			<p class="veryLargeText kinda">
       <a href="https://www.youtube.com/watch?v=6XGeJwsUP9c"><time datetime="2025-09-04">September 4th 2025</time></a>
 			</p>
+			<p id="countdown"></p>
 		</section>
 		<hr aria-hidden="true">
 
@@ -168,6 +170,30 @@
 				<a href="https://github.com/Araraura/IsSilksongOut">GitHub Repository</a>
 			</p>
 		</footer>
+		 <script>
+    // Set the target date/time
+    const targetDate = new Date("Sep 4, 2025 00:00:00").getTime();
+
+    // Update every second
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").textContent = "It's releasing today!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("countdown").textContent =
+        `${days}d ${hours}h ${minutes}m ${seconds}s left`;
+    }, 1000);
+  </script>
 	</body>
 </html>
 
