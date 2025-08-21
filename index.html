@@ -172,7 +172,10 @@
 		</footer>
 		 <script>
     // Set the target date/time
-    const targetDate = new Date("Sep 4, 2025 00:00:00").getTime();
+    const targetDate = new Date(
+      new Date("2025-09-04T00:00:00")
+        .toLocaleString("en-US", { timeZone: "Australia/Adelaide" })
+    ).getTime();
 
     // Update every second
     const timer = setInterval(() => {
